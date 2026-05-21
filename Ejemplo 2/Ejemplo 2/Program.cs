@@ -10,7 +10,7 @@ namespace Ejemplo_2
     {
         static void Main(string[] args)
         {
-            int opcion = 0; int acum = 0; int cont = 0;
+            int opcion; int acum = 0; int cont = 0;
 
             do
             {
@@ -36,7 +36,7 @@ namespace Ejemplo_2
                         double promedio = 0;
                         if (cont > 0)
                         {
-                            promedio = 1.0 * acum / cont;
+                            promedio = acum / cont;
                             Console.WriteLine($"Promedio: {promedio:F2}");
                         }
                         else
@@ -52,7 +52,7 @@ namespace Ejemplo_2
                 }
 
 
-            } while (opcion == -1);
+            } while (opcion != -1);
             Console.WriteLine("Presionar una tecla para finalizar");
             Console.ReadKey();
         }
